@@ -26,6 +26,7 @@ set :keep_releases, 5
 
 # secrets.yml用のシンボリックリンクを追加
 set :linked_files, %w{ config/credentials.yml.enc }
+set :linked_files, %w{ config/master.key }
 
 
 after 'deploy:publishing', 'deploy:restart'
