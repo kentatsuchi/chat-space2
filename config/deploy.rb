@@ -25,7 +25,7 @@ set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 set :keep_releases, 5
 
 # secrets.yml用のシンボリックリンクを追加
-set :linked_files, %w{ config/credentials.yml.enc, config/master.key }
+set :linked_files, %w{ config/credentials.yml.enc config/master.key }
 
 
 after 'deploy:publishing', 'deploy:restart'
